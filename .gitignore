@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+recordings/a2a_server.log

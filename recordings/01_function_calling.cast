@@ -1,0 +1,4 @@
+{"version": 2, "width": 80, "height": 24, "timestamp": 1787679194, "idle_time_limit": 2.0, "env": {"SHELL": "/bin/bash", "TERM": null}}
+[2.072144, "o", "stopReason: tool_use\r\n"]
+[2.075761, "o", "{\r\n  \"text\": \"I'll check the current weather in Munich for you.\"\r\n}\r\n{\r\n  \"toolUse\": {\r\n    \"toolUseId\": \"tooluse_3LWbMlbIYX2q6oeUa3Wu7i\",\r\n    \"name\": \"get_weather\",\r\n    \"input\": {\r\n      \"city\": \"Munich\"\r\n    },\r\n    \"type\": \"tool_use\"\r\n  }\r\n}\r\nModel requested: get_weather {'city': 'Munich'}\r\nLocal execution result: {'temp_c': 18, 'condition': 'rain'}\r\n"]
+[4.171964, "o", "Yes, **definitely take a rain jacket with you in Munich today!** \r\n\r\nThe current conditions show:\r\n- **Weather:** Rain\r\n- **Temperature:** 18°C (about 64°F)\r\n\r\nIt's actively raining, so a rain jacket is essential to stay dry. At 18°C, it's also fairly cool, so the jacket will help keep you warm while protecting you from the rain.\r\n"]
