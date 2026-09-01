@@ -1,0 +1,22 @@
+# AWS Summit 2026 talk demos — combined dependencies
+# Tested with Python 3.11 (versions pinned from the working .venv, Aug 2026)
+
+# Core (01_function_calling, 02_react_pattern)
+boto3==1.43.79
+rich==14.3.4
+
+# 03_strands + 06_a2a (Strands Agents SDK, incl. A2A support)
+strands-agents==1.53.0
+a2a-sdk==0.3.26
+uvicorn==0.52.4
+httpx==0.28.1
+
+# 04_crewai
+crewai==1.6.1
+
+# 05_mcp
+mcp==1.29.1
+
+# Notebooks
+jupyter==1.1.1
+jupytext==1.19.5
