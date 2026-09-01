@@ -104,6 +104,9 @@ def run_agent(user_question: str, max_turns: int = 10) -> str:
             if "text" in block and block["text"].strip():
                 console.print(Panel(block["text"], title=f"Thought (turn {turn})", border_style="cyan"))
 
+        # If the model did NOT stop to call a tool, the ReAct loop is over:
+        # it produced its final answer. Extract and return the first text
+        # block from the reply (content is a list of blocks, not plain text).
         if response["stopReason"] != "tool_use":
             return next(b["text"] for b in msg["content"] if "text" in b)
 
