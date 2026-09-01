@@ -21,6 +21,9 @@ from rich.panel import Panel
 console = Console()
 bedrock = boto3.client("bedrock-runtime", region_name="us-west-2")
 MODEL_ID = "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+# Counter-example: Mistral 7B Instruct has NO tool-call support on Bedrock —
+# Converse rejects the request as soon as toolConfig is passed.
+#MODEL_ID = "mistral.mistral-7b-instruct-v0:2"
 
 # %% [markdown]
 # ## Tools: a tiny travel toolbox

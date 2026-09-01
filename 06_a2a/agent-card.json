@@ -1,0 +1,25 @@
+{
+    "capabilities": {
+        "streaming": true
+    },
+    "defaultInputModes": [
+        "text"
+    ],
+    "defaultOutputModes": [
+        "text"
+    ],
+    "description": "Answers weather questions for cities on cycling routes.",
+    "name": "Weather Specialist",
+    "preferredTransport": "JSONRPC",
+    "protocolVersion": "0.3.0",
+    "skills": [
+        {
+            "description": "Get current weather for a city.",
+            "id": "get_weather",
+            "name": "get_weather",
+            "tags": []
+        }
+    ],
+    "url": "http://127.0.0.1:9000/",
+    "version": "0.0.1"
+}

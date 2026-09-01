@@ -79,7 +79,19 @@ crew = Crew(agents=[analyst, writer], tasks=[analyze, brief],
 # ## Run the crew
 
 # %%
-result = crew.kickoff()
+# In Jupyter an asyncio event loop is already running, and newer CrewAI
+# versions refuse a synchronous kickoff() there. Running kickoff() in a
+# worker thread (which has no event loop) works in every environment —
+# notebook or plain terminal, old or new CrewAI.
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
+
+try:
+    asyncio.get_running_loop()  # raises RuntimeError outside Jupyter
+    with ThreadPoolExecutor(max_workers=1) as pool:
+        result = pool.submit(crew.kickoff).result()
+except RuntimeError:
+    result = crew.kickoff()
 
 # %%
 print(result)
